@@ -1,0 +1,165 @@
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e8e8f1;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: black;
+    height: 100px;
+    margin: 40px 4%;
+    border-radius: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    background-color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo span {
+    color: blue;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Email Button */
+.email {
+    background-color: white;
+    color: black;
+    padding: 18px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* Hide Mobile Menu */
+#menu {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Main Heading */
+.main {
+    margin: 80px 6%;
+}
+
+.heading h1 {
+    color: #11112f;
+    font-size: 75px;
+    line-height: 1.1;
+}
+
+.heading h1 span {
+    color: blue;
+}
+
+.icons {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 35px;
+    color: #11112f;
+}
+
+/* Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: 80px;
+        margin: 20px 4%;
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Mobile Menu Design */
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+
+        background-color: black;
+        border-radius: 30px;
+        padding: 30px;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    /* Open Menu */
+    #menu:checked ~ .mobile-menu {
+        display: flex;
+    }
+
+    .heading h1 {
+        font-size: 45px;
+    }
+
+    .icons {
+        font-size: 25px;
+    }
+
+    .main {
+        margin-top: 60px;
+    }
+}
